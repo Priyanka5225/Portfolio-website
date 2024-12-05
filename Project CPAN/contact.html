@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            text-align: center;
+    background-color: antiquewhite;
+        }
+    .box{
+        text-align:inherit;
+    
+    }
+    
+    header {
+                background-color: #333;
+                padding: 10px;
+                text-align: center;
+            }
+    
+            nav a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                padding: 10px;
+                margin: 0 15px;
+            }
+    
+            nav a:hover {
+                color: #ffff47;
+            }
+    </style>
+</head>
+<body>
+    <header>
+    <nav style="font-size: 25px;">
+        
+            <a href="index.html">Home</a>
+            <a href="bio.html">Bio</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="article.html">Article</a>
+            <a href="gallery2.html">Gallery</a>
+        
+    </nav>
+</header>
+        <h1>Contact Me</h1>
+        
+
+    <main>
+        
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div>
+            <h2>Email:</h2>
+            <p>gs065355@gmail.com</p>
+            <h2>Instagram:</h2>
+            <p>__.priyanka54</p>
+        </div>
+    </main>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            if (!document.getElementById("name").value || !document.getElementById("email").value || !document.getElementById("message").value) {
+                alert("Please fill in all fields.");
+                event.preventDefault();
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Priyanka</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+       
+ header {
+                background-color: #333;
+                padding: 10px;
+                text-align: center;
+            }
+    
+            nav a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                padding: 10px;
+                margin: 0 15px;
+            }
+    
+            nav a:hover {
+                color: #ffff47;
+            }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: 15% auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="bio.html">Bio</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="article.html">Article</a>
+             
+        </nav>
+        
+    </header>
+    <h1>Showcase Of First portfolio project</h1>
+    <div class="gallery">
+        <img src="images/image1.png" alt="Image 1" class="gallery-image">
+        <img src="images/image2.png" alt="Image 2" class="gallery-image">
+        <img src="images/image3.png" alt="Image 3" class="gallery-image">
+        <img src="images/image4.png" alt="Image 4" class="gallery-image">
+        
+    </div>
+
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Priyanka</p>
+    </footer>
+
+    <script>
+        
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        var closeBtn = document.getElementsByClassName("close")[0];
+        var images = document.getElementsByClassName("gallery-image");
+
+    
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        }
+
+        
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+</html>

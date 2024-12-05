@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <style>
+        body{
+            background-color:antiquewhite;
+        }
+        table{
+            font-style: italic;
+            border:black;
+        }
+    
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ffff47;
+        }
+        
+        
+        .image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.image_container img {
+    max-width: 100%;
+    height: auto;
+    width: 50%;  /* Set to a percentage of the container's width */
+    border: 5px solid #333;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image_container img:hover {
+    transform: scale(1.05);  /* Slight zoom effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav style="font-size: 25px"; >
+            
+                <a href="index.html">Home</a>&nbsp;
+                <a href="bio.html">Bio</a>&nbsp;
+                <a href="projects.html">Projects</a>&nbsp;
+                <a href="contact.html">Contact</a>&nbsp;
+                <a href="article.html">Article</a>&nbsp;
+                <a href="gallery2.html">Gallery</a>&nbsp;
+                
+        </nav>
+    </header>
+    <h1 >Resume</h1>
+    <main>
+        <h2>Education</h2>
+        <table border="2">
+            <tr>
+                <th>Secondary Education</th>
+                <th>Senior Secondary Education</th>
+                
+            </tr>
+            <tr>
+                <td>Convent School,Dasuya</td>
+                <td>Dav College,Dasuya</td>
+                
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h2>Experience</h2>
+        <ul>
+            <li>SalesPerson</li>
+            <li>Cashier</li>
+        </ul>
+        <h2> Certifications</h2>
+        <li>Certificate in Financial Accounting</li>
+        <li>Certificate in CCO(basics computer course)</li>
+    </main>
+    
+    <br>
+    <div class="image_container">
+        <img src="images/Resume.jpg">
+    </div>
+    <br>
+    <br>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Priyanka</p>
+</footer>
+</html>
